@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import ProductQuickView from './components/ProductPage';
+import { useSelector } from "react-redux";
+
+interface State{
+  display: Display;
+}
+
+interface Display{
+  displayProductPage: boolean;
+}
 
 function App() {
+  const display = useSelector((state: State) => state.display.displayProductPage);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav></Nav>
+      {display? <ProductQuickView></ProductQuickView> :
+      <Home></Home>}
     </div>
   );
 }
