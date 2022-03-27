@@ -1,3 +1,8 @@
+.App{
+  height: 100vh;
+  background: #f6f8fa;
+}
+
 .primary-text {
   color: #1b82d6;
 }
@@ -128,9 +133,10 @@
 
 .product-card {
   box-shadow: 1px 1px 8px 0px #c7c7c7;
+  background: white;
   width: fit-content;
   margin: 8px;
-  border-radius: 3px;
+  border-radius: 8px;
 
   transition: all 0.5s;
 }
@@ -145,14 +151,16 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background: #1b82d6;
+  background: white;
+  border-radius: 8px;
   padding: 10px;
-  border-end-end-radius: 3px;
-  border-end-start-radius: 3px;
 }
 
 .product-footer button {
+  margin-bottom: 8px;
+  margin-right: 8px;
   display: flex;
+  align-self: end;
   justify-content: space-between;
   align-items: center;
 }
@@ -160,11 +168,12 @@
 .product-text {
   width: 100%;
   margin: 5px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
 }
 
 .product-card img {
@@ -175,16 +184,17 @@
 
 .product-name {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #000000;
+  color: #2a3449;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .product-price {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: white;
+  color: tomato;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 500;
+  margin: 8px;
 }
 
 button {
@@ -196,7 +206,7 @@ button {
   padding: 8px 12px;
   border: none;
   border-radius: 2px;
-  background: #282c34;
+  background: #1991eb;
   color: #ffffff;
 
   transition: all 0.5s;
@@ -204,19 +214,22 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: #424752;
+  background: #145a8f;
 }
 
 /*******  Cart Modal  *******/
 
 #cart-modal {
   display: flex;
+  z-index: 1000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 290px;
-  background: #1b82d6;
-  color: #ffffff;
+  border-radius: 8px;
+  box-shadow: insert 1px 1px 8px 0px #c7c7c7;
+  background: #e2e5e8;
+  color: #000;
   position: relative;
   padding: 15px 10px;
   right: 250px;
@@ -234,6 +247,7 @@ button:hover {
   text-transform: uppercase;
   display: flex;
   width: 100%;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -246,6 +260,7 @@ button:hover {
 }
 
 .cart-trash:hover {
+  cursor: pointer;
   color: tomato;
 }
 
